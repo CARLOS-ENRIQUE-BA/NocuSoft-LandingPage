@@ -58,7 +58,7 @@ const Services: React.FC = () => {
   ]
 
   return (
-    <section id="services" className="py-32 bg-nucusoft-light-gray/30">
+    <section id="services" className="p-8 bg-nucusoft-light-gray/30">
       <div className="container-custom">
         <AnimatedSection>
           <div className="text-center space-y-6 mb-20">

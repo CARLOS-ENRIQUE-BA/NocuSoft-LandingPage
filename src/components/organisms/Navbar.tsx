@@ -5,6 +5,8 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { HiMenu, HiX } from "react-icons/hi"
 import { FaCode } from "react-icons/fa"
+import Image from "next/image"
+import Logo from "../../assets/Logo.png"
 import Button from "../atoms/Button"
 
 const Navbar: React.FC = () => {
@@ -55,7 +57,7 @@ const Navbar: React.FC = () => {
       height: 0,
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
+        ease: [0.4, 0, 0.2, 1],
       },
     },
     open: {
@@ -63,7 +65,7 @@ const Navbar: React.FC = () => {
       height: "auto",
       transition: {
         duration: 0.3,
-        ease: "easeInOut",
+        ease: [0.4, 0, 0.2, 1],
       },
     },
   }
@@ -90,10 +92,13 @@ const Navbar: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-nucusoft-black to-nucusoft-dark-gray rounded-xl flex items-center justify-center shadow-lg">
-              <FaCode className="text-nucusoft-white text-lg" />
-            </div>
-            <span className="text-2xl font-display font-bold text-nucusoft-black">Nucúsoft</span>
+          <Image
+            src={Logo}
+            alt="Log Nucusoft"
+            width={200}
+            style={{ objectFit: "cover" }}
+            priority
+          />
           </motion.div>
 
           {/* Desktop Menu */}

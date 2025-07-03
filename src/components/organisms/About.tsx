@@ -17,7 +17,7 @@ const About: React.FC = () => {
   ]
 
   return (
-    <section id="about" className="py-32 bg-nucusoft-white">
+    <section id="about" className="p-8 bg-nucusoft-white">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <AnimatedSection direction="left" className="relative order-2 lg:order-1">

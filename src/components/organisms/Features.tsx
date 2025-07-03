@@ -45,7 +45,7 @@ const Features: React.FC = () => {
   ]
 
   return (
-    <section id="features" className="py-32 bg-nucusoft-light-gray/30">
+    <section id="features" className="p-8 bg-nucusoft-light-gray/30">
       <div className="container-custom">
         <AnimatedSection>
           <div className="text-center space-y-6 mb-20">

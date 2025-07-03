@@ -13,6 +13,8 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa"
 import Text from "../atoms/Text"
+import Image from "next/image"
+import Logo from "../../assets/Logo.png"
 import AnimatedSection from "../atoms/AnimatedSection"
 
 const Footer: React.FC = () => {
@@ -44,15 +46,12 @@ const Footer: React.FC = () => {
   }
 
   const socialLinks = [
-    { name: "Facebook", icon: FaFacebook, href: "#" },
-    { name: "Twitter", icon: FaTwitter, href: "#" },
-    { name: "LinkedIn", icon: FaLinkedin, href: "#" },
-    { name: "Instagram", icon: FaInstagram, href: "#" },
+    { name: "Facebook", icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=61577296095846" }
   ]
 
   return (
     <footer className="bg-nucusoft-dark-gray text-nucusoft-white">
-      <div className="container-custom py-16">
+      <div className="container-custom p-8">
         <AnimatedSection>
           <div className="grid gap-12 lg:grid-cols-4">
             {/* Company Info */}
@@ -62,10 +61,13 @@ const Footer: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-xl flex items-center justify-center shadow-lg">
-                  <FaCode className="text-nucusoft-black text-lg" />
-                </div>
-                <span className="text-2xl font-display font-bold">Nucúsoft</span>
+              <Image
+                src={Logo}
+                alt="Log Nucusoft"
+                width={200}
+                style={{ objectFit: "cover" }}
+                priority
+              />
               </motion.div>
               <Text className="text-nucusoft-light-gray mb-6">
                 Transformamos ideas en soluciones digitales innovadoras. Especialistas en desarrollo de software
@@ -74,15 +76,11 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-nucusoft-light-gray">
                   <FaEnvelope className="w-4 h-4" />
-                  <Text variant="small">contacto@nucusoft.com</Text>
+                  <Text variant="small" className="text-nucusoft-light-gray">contacto@nucusoft.com</Text>
                 </div>
                 <div className="flex items-center gap-3 text-nucusoft-light-gray">
                   <FaPhone className="w-4 h-4" />
-                  <Text variant="small">+52 (55) 1234-5678</Text>
-                </div>
-                <div className="flex items-center gap-3 text-nucusoft-light-gray">
-                  <FaMapMarkerAlt className="w-4 h-4" />
-                  <Text variant="small">CDMX, México</Text>
+                  <Text variant="small" className="text-nucusoft-light-gray">+52 (55) 1234-5678</Text>
                 </div>
               </div>
             </div>
@@ -147,7 +145,6 @@ const Footer: React.FC = () => {
         </AnimatedSection>
 
         {/* Social Links & Copyright */}
-        <AnimatedSection delay={0.3}>
           <div className="border-t border-nucusoft-light-gray/20 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex items-center gap-6">
@@ -181,7 +178,6 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
-        </AnimatedSection>
       </div>
     </footer>
   )

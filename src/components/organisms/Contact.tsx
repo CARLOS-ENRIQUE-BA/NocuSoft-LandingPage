@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa"
+import { FaFacebook, FaPhone } from "react-icons/fa"
 import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import Button from "../atoms/Button"
@@ -28,83 +28,40 @@ const Contact: React.FC = () => {
           </div>
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Form */}
-          <AnimatedSection direction="left">
-            <div className="space-y-8">
-              <div>
-                <Heading level={3} className="mb-4">
-                  Envíanos un mensaje
-                </Heading>
-                <Text color="muted">
-                  Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.
-                </Text>
-              </div>
-
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <InputWithLabel label="Nombre" placeholder="Tu nombre" required />
-                  <InputWithLabel label="Apellido" placeholder="Tu apellido" required />
-                </div>
-
-                <InputWithLabel label="Email" type="email" placeholder="tu@email.com" required />
-
-                <InputWithLabel label="Teléfono" type="tel" placeholder="+1 (555) 123-4567" />
-
-                <InputWithLabel label="Empresa" placeholder="Nombre de tu empresa" />
-
-                <div className="space-y-2">
-                  <label className="block text-sm font-medium text-nucusoft-black">
-                    Mensaje <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    className="w-full px-4 py-3 border border-nucusoft-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-nucusoft-beige focus:border-nucusoft-beige transition-colors duration-200 min-h-[120px] resize-vertical"
-                    placeholder="Cuéntanos sobre tu proyecto..."
-                    required
-                  />
-                </div>
-
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Button variant="primary" size="lg" className="w-full">
-                    <FaPaperPlane className="mr-2" />
-                    Enviar Mensaje
-                  </Button>
-                </motion.div>
-              </form>
+        {/* Contact Information ÚNICA Y CENTRADA */}
+        <AnimatedSection direction="right" delay={0.2}>
+          <div className="space-y-8 max-w-4xl mx-auto">
+            <div>
+              <Heading level={3} className="mb-4 text-center">
+                Información de contacto
+              </Heading>
+              <Text color="muted" className="text-center">
+                También puedes contactarnos directamente a través de cualquiera de estos medios.
+              </Text>
             </div>
-          </AnimatedSection>
 
-          {/* Contact Information */}
-          <AnimatedSection direction="right" delay={0.2}>
-            <div className="space-y-8">
-              <div>
-                <Heading level={3} className="mb-4">
-                  Información de contacto
-                </Heading>
-                <Text color="muted">
-                  También puedes contactarnos directamente a través de cualquiera de estos medios.
-                </Text>
-              </div>
-
-              <div className="space-y-6">
-                <motion.div whileHover={{ scale: 1.02, y: -2 }} transition={{ type: "spring", stiffness: 300 }}>
+            <div className="space-y-6">
+              <motion.div whileHover={{ scale: 1.02, y: -2 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <a href="https://www.facebook.com/profile.php?id=61577296095846" target="_blank" rel="noopener noreferrer" className="block">
                   <Card>
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <FaEnvelope className="text-nucusoft-black" />
+                        <FaFacebook className="text-nucusoft-black" />
                       </div>
                       <div>
                         <Heading level={5} className="mb-1">
-                          Email
+                          Facebook
                         </Heading>
                         <Text color="muted">contacto@nucusoft.com</Text>
                         <Text color="muted">ventas@nucusoft.com</Text>
                       </div>
                     </div>
                   </Card>
-                </motion.div>
+                </a>
+              </motion.div>
 
-                <motion.div whileHover={{ scale: 1.02, y: -2 }} transition={{ type: "spring", stiffness: 300 }}>
+              <motion.div whileHover={{ scale: 1.02, y: -2 }} transition={{ type: 'spring', stiffness: 300 }}>
+                <a href="https://wa.me/5219612134751" target="_blank" rel="noopener noreferrer" className="block">
                   <Card>
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
@@ -114,38 +71,15 @@ const Contact: React.FC = () => {
                         <Heading level={5} className="mb-1">
                           Teléfono
                         </Heading>
-                        <Text color="muted">+52 (55) 1234-5678</Text>
-                        <Text color="muted">+52 (55) 8765-4321</Text>
+                        <Text color="muted">+52 1 961 213 4751</Text>
                       </div>
                     </div>
                   </Card>
-                </motion.div>
-
-                <motion.div whileHover={{ scale: 1.02, y: -2 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Card>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <FaMapMarkerAlt className="text-nucusoft-black" />
-                      </div>
-                      <div>
-                        <Heading level={5} className="mb-1">
-                          Oficina
-                        </Heading>
-                        <Text color="muted">
-                          Av. Insurgentes Sur 1234
-                          <br />
-                          Col. Del Valle, CDMX
-                          <br />
-                          México, 03100
-                        </Text>
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              </div>
+                </a>
+              </motion.div>
             </div>
-          </AnimatedSection>
-        </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   )

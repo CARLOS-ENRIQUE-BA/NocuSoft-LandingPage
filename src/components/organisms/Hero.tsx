@@ -7,6 +7,8 @@ import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import Button from "../atoms/Button"
 import AnimatedSection from "../atoms/AnimatedSection"
+import Image from "next/image"
+import HeroImg from "../../assets/HeroImg.jpg"
 
 const Hero: React.FC = () => {
   return (
@@ -16,7 +18,7 @@ const Hero: React.FC = () => {
     >
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
+          <div className="space-y-8 p-8">
             <AnimatedSection delay={0.2}>
               <div className="inline-flex items-center px-4 py-2 bg-nucusoft-beige/20 rounded-full">
                 <FaRocket className="mr-2 text-nucusoft-black" />
@@ -53,36 +55,18 @@ const Hero: React.FC = () => {
                 </motion.div>
               </div>
             </AnimatedSection>
-
-            <AnimatedSection delay={1.0}>
-              <div className="flex items-center gap-8 text-sm text-gray-600">
-                <div className="flex items-center gap-2">
-                  <FaCheckCircle className="text-green-500" />
-                  <span>+200 Proyectos Exitosos</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <FaClock className="text-nucusoft-beige" />
-                  <span>5 Años de Experiencia</span>
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
 
           <AnimatedSection delay={0.6} direction="right">
             <div className="relative">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-nucusoft-beige to-nucusoft-light-gray rounded-3xl blur-3xl opacity-30"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.5, 0.3],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                }}
-              />
-              <div className="relative z-10 aspect-[4/5] bg-gradient-to-br from-nucusoft-dark-gray to-nucusoft-black rounded-3xl shadow-2xl overflow-hidden">
+              <div className="relative z-10 aspect-[4/5] rounded-3xl shadow-2xl overflow-hidden">
+                <Image
+                  src={HeroImg}
+                  alt="Imagen Hero Nucusoft"
+                  fill
+                  style={{ objectFit: "cover" }}
+                  priority
+                />
                 <div className="absolute inset-0 bg-gradient-to-br from-nucusoft-beige/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <motion.div
