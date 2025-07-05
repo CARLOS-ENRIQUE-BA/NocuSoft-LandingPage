@@ -2,7 +2,8 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { FaGlobe, FaMobile, FaDatabase, FaCog, FaShoppingCart, FaChartBar } from "react-icons/fa"
+import { FaGlobe, FaMobile, FaDatabase, FaShoppingCart } from "react-icons/fa"
+import { MdDinnerDining, MdContactPage } from "react-icons/md";
 import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import Card from "../molecules/Card"
@@ -14,11 +15,11 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: <FaGlobe />,
-      title: "Desarrollo Web",
+      title: "Desarrollo Web a Medida ",
       description:
         "Aplicaciones web modernas y responsivas utilizando las últimas tecnologías como React, Next.js y Node.js.",
-      features: ["Diseño Responsivo", "SEO Optimizado", "Alta Performance", "Seguridad Avanzada"],
-      price: "Desde $2,500",
+      features: ["Diseño Responsivo", "Exportar/Importar", "Gestion de usuarios", "Multi-usuario"],
+      price: "Desde $8,000",
     },
     {
       icon: <FaMobile />,
@@ -29,30 +30,30 @@ const Services: React.FC = () => {
     },
     {
       icon: <FaDatabase />,
-      title: "Sistemas Empresariales",
+      title: "Sistemas Empresariales o CRM",
       description: "Soluciones ERP y CRM personalizadas para optimizar los procesos de tu empresa.",
-      features: ["Integración APIs", "Reportes Avanzados", "Multi-usuario", "Cloud Ready"],
-      price: "Desde $8,000",
+      features: ["Integración APIs", "Reportes Avanzados", "Multi-usuario", "Gestión de historial de citas."],
+      price: "Desde $20,000",
     },
     {
-      icon: <FaCog />,
-      title: "Automatización",
-      description: "Automatización de procesos empresariales para aumentar la eficiencia y reducir costos.",
-      features: ["Workflows", "Integraciones", "Monitoreo", "Escalabilidad"],
-      price: "Desde $3,500",
+      icon: <MdContactPage />,
+      title: "Paquete Basico",
+      description: "Landing pages rápidas y responsivas, listas para captar clientes desde el primer clic.",
+      features: ["Diseño adaptable a móviles y computadoras", "Publicación rápida en hosting o dominio propio", "Personalizado", "Empreza/negocio"],
+      price: "Desde $1,500",
     },
     {
       icon: <FaShoppingCart />,
       title: "E-commerce",
       description: "Tiendas online completas con pasarelas de pago, gestión de inventario y analytics.",
-      features: ["Pagos Seguros", "Gestión Stock", "Analytics", "Multi-moneda"],
-      price: "Desde $3,000",
+      features: ["Carrito de compras funcional", "Gestión Stock", "Reportes y analítica de ventas", "Moneda local para tus clientes"],
+      price: "Desde $8,000",
     },
     {
-      icon: <FaChartBar />,
-      title: "Business Intelligence",
-      description: "Dashboards y reportes inteligentes para la toma de decisiones basada en datos.",
-      features: ["Dashboards", "Reportes Real-time", "Data Mining", "Visualización"],
+      icon: <MdDinnerDining />,
+      title: "Menú de restaurant",
+      description: "Menús digitales interactivos para restaurantes, con diseño responsivo, visual atractivo y listos para mostrar promociones, precios y productos desde cualquier dispositivo.",
+      features: ["Visualización de platillos por categorías", "Promociones destacadas y secciones especiales", "Precios en tiempo real"],
       price: "Desde $5,000",
     },
   ]

@@ -33,8 +33,9 @@ const CallToAction: React.FC = () => {
               </Heading>
 
               <Text variant="lead" className="text-nucusoft-light-gray">
-                Agenda una consulta gratuita y descubre cómo podemos ayudarte a llevar tu proyecto al siguiente nivel.
-                Nuestro equipo de expertos está listo para convertir tu visión en una solución tecnológica exitosa.
+              Contáctanos a través de nuestra página de Facebook y descubre cómo podemos ayudarte a llevar tu 
+              proyecto al siguiente nivel. Estamos listos para convertir tu visión en una solución tecnológica 
+              funcional y personalizada.
               </Text>
             </div>
           </AnimatedSection>
@@ -79,7 +80,7 @@ const CallToAction: React.FC = () => {
               >
                 <div className="text-4xl font-bold text-nucusoft-beige mb-2">100%</div>
                 <Text variant="caption" className="text-nucusoft-light-gray">
-                  Consulta gratuita
+                Atención rápida y directa
                 </Text>
               </motion.div>
               <motion.div
@@ -87,9 +88,9 @@ const CallToAction: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <div className="text-4xl font-bold text-nucusoft-beige mb-2">5+</div>
+                <div className="text-4xl font-bold text-nucusoft-beige mb-2">1+</div>
                 <Text variant="caption" className="text-nucusoft-light-gray">
-                  Años de experiencia
+                  Proyectos exitosos
                 </Text>
               </motion.div>
             </div>

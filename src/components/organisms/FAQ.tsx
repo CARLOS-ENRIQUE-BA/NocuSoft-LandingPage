@@ -11,7 +11,7 @@ const FAQ: React.FC = () => {
     {
       question: "¿Cuánto tiempo toma desarrollar una aplicación web?",
       answer:
-        "El tiempo de desarrollo varía según la complejidad del proyecto. Una aplicación web básica puede tomar entre 4-8 semanas, mientras que proyectos más complejos pueden requerir 3-6 meses. Durante la consulta inicial, proporcionamos un cronograma detallado basado en tus requisitos específicos.",
+        "El tiempo de desarrollo varía según la complejidad del proyecto. Una aplicación web del paquete básico puede tomar alrededor de 1 semana, mientras que proyectos más complejos, como sistemas empresariales o CRM, pueden requerir entre 3 y 6 meses. Durante la consulta inicial, proporcionamos un cronograma detallado basado en tus requisitos específicos.",
     },
     {
       question: "¿Ofrecen soporte y mantenimiento después del lanzamiento?",
@@ -32,11 +32,6 @@ const FAQ: React.FC = () => {
       question: "¿Cómo manejan la seguridad de los datos?",
       answer:
         "La seguridad es nuestra prioridad. Implementamos las mejores prácticas de seguridad incluyendo encriptación de datos, autenticación segura, auditorías de seguridad regulares, y cumplimiento con estándares como GDPR. Todos nuestros desarrolladores están certificados en prácticas de desarrollo seguro.",
-    },
-    {
-      question: "¿Ofrecen garantía en sus desarrollos?",
-      answer:
-        "Sí, ofrecemos garantía de 6 meses en todos nuestros desarrollos que cubre corrección de errores y problemas relacionados con la funcionalidad especificada. Además, proporcionamos documentación completa y capacitación para tu equipo.",
     },
   ]
 

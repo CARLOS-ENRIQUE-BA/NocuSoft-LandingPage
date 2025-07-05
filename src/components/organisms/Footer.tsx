@@ -20,12 +20,12 @@ import AnimatedSection from "../atoms/AnimatedSection"
 const Footer: React.FC = () => {
   const footerLinks = {
     services: [
-      { name: "Desarrollo Web", href: "#" },
+      { name: "Desarrollo Web a Medida", href: "#" },
       { name: "Apps Móviles", href: "#" },
-      { name: "Sistemas Empresariales", href: "#" },
+      { name: "Sistemas Empresariales o CRM", href: "#" },
+      { name: "Paquete Basico", href: "#" },
       { name: "E-commerce", href: "#" },
-      { name: "Automatización", href: "#" },
-      { name: "Business Intelligence", href: "#" },
+      { name: "Menú de restaurant", href: "#" },
     ],
     company: [
       { name: "Sobre Nosotros", href: "#about" },
@@ -41,7 +41,6 @@ const Footer: React.FC = () => {
       { name: "FAQ", href: "#faq" },
       { name: "Términos de Servicio", href: "#" },
       { name: "Política de Privacidad", href: "#" },
-      { name: "Cookies", href: "#" },
     ],
   }
 

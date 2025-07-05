@@ -10,8 +10,8 @@ import AnimatedSection from "../atoms/AnimatedSection"
 
 const About: React.FC = () => {
   const achievements = [
-    "Más de 200 proyectos completados exitosamente",
-    "Equipo de desarrolladores certificados",
+    "Proyectos en crecimiento con enfoque en calidad y satisfacción",
+    "Desarrolladores comprometidos con la mejora continua",
     "Metodologías ágiles y entregas puntuales",
     "Soporte técnico 24/7 para nuestros clientes",
   ]
@@ -21,12 +21,21 @@ const About: React.FC = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <AnimatedSection direction="left" className="relative order-2 lg:order-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-nucusoft-beige/20 to-nucusoft-light-gray/20 rounded-3xl transform rotate-3"></div>
             <motion.div
-              className="relative z-10 aspect-[5/4] bg-gradient-to-br from-nucusoft-dark-gray to-nucusoft-black rounded-3xl shadow-xl overflow-hidden"
+              className="relative z-10 aspect-[5/4] rounded-3xl shadow-xl overflow-hidden"
               whileHover={{ scale: 1.02, rotate: -1 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/AboutVideo.mp4" type="video/mp4" />
+                Tu navegador no soporta el elemento de video.
+              </video>
               <div className="absolute inset-0 bg-gradient-to-br from-nucusoft-beige/10 to-transparent"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <motion.div
@@ -36,21 +45,6 @@ const About: React.FC = () => {
                   transition={{ delay: 0.5, duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <div className="w-24 h-24 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-full mx-auto flex items-center justify-center shadow-lg">
-                    <FaUsers className="text-nucusoft-black text-3xl" />
-                  </div>
-                  <div className="text-nucusoft-white">
-                    <motion.div
-                      className="text-4xl font-bold"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.8, duration: 0.6 }}
-                      viewport={{ once: true }}
-                    >
-                      200+
-                    </motion.div>
-                    <div className="text-sm opacity-80">Proyectos Exitosos</div>
-                  </div>
                 </motion.div>
               </div>
             </motion.div>
@@ -69,8 +63,8 @@ const About: React.FC = () => {
 
                 <Text color="muted">
                   Somos una empresa especializada en el desarrollo de soluciones tecnológicas personalizadas. Nuestro
-                  equipo de expertos combina creatividad, experiencia técnica y las últimas tecnologías para transformar
-                  ideas en productos digitales exitosos.
+                  equipo combina creatividad, experiencia técnica y las últimas tecnologías para transformar
+                  ideas en productos digitales.
                 </Text>
 
                 <Text color="muted">

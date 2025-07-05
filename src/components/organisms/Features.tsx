@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { FaCode, FaMobile, FaCloud, FaShieldAlt, FaBolt, FaUsers } from "react-icons/fa"
+import { FaCode, FaMobile, FaRunning, FaShieldAlt, FaBolt, FaUsers } from "react-icons/fa"
 import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import FeatureCard from "../molecules/FeatureCard"
@@ -23,14 +23,14 @@ const Features: React.FC = () => {
         "Desarrollamos aplicaciones móviles para iOS y Android con rendimiento óptimo y experiencia excepcional.",
     },
     {
-      icon: <FaCloud />,
-      title: "Soluciones en la Nube",
-      description: "Implementamos arquitecturas escalables en la nube para garantizar disponibilidad 24/7.",
+      icon: <FaRunning />,
+      title: "Procesos Ágiles",
+      description: "Trabajamos de forma flexible y colaborativa para que tu aplicación evolucione según tus metas.",
     },
     {
       icon: <FaShieldAlt />,
-      title: "Seguridad Avanzada",
-      description: "Aplicamos las mejores prácticas de seguridad para proteger tus datos y los de tus usuarios.",
+      title: "Seguridad Confiable",
+      description: "Aplicamos buenas prácticas para mantener tu información protegida y brindar tranquilidad a tus usuarios.",
     },
     {
       icon: <FaBolt />,
