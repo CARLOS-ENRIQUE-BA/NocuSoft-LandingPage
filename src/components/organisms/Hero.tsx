@@ -39,22 +39,6 @@ const Hero: React.FC = () => {
               </Text>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.8}>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button variant="primary" size="lg">
-                    Comenzar Proyecto
-                    <FaArrowRight className="ml-2" />
-                  </Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button variant="outline" size="lg">
-                    <FaPlay className="mr-2" />
-                    Ver Demo
-                  </Button>
-                </motion.div>
-              </div>
-            </AnimatedSection>
           </div>
 
           <AnimatedSection delay={0.6} direction="right">
