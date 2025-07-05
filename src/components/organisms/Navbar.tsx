@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
           {isMenuOpen && (
             <motion.div
               className="lg:hidden overflow-hidden border-t border-nucusoft-light-gray/20"
-              variants={menuVariants}
+              variants={menuVariants as any}
               initial="closed"
               animate="open"
               exit="closed"

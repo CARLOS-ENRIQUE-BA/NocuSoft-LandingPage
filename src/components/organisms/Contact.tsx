@@ -2,7 +2,8 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { FaFacebook, FaPhone } from "react-icons/fa"
+import { FaFacebookMessenger } from "react-icons/fa"
+import { IoLogoWhatsapp } from "react-icons/io";
 import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import Button from "../atoms/Button"
@@ -42,18 +43,17 @@ const Contact: React.FC = () => {
 
             <div className="space-y-6">
               <motion.div whileHover={{ scale: 1.02, y: -2 }} transition={{ type: 'spring', stiffness: 300 }}>
-                <a href="https://www.facebook.com/profile.php?id=61577296095846" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://m.me/716402411552215" target="_blank" rel="noopener noreferrer" className="block">
                   <Card>
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <FaFacebook className="text-nucusoft-black" />
+                        <FaFacebookMessenger className="text-nucusoft-black" />
                       </div>
                       <div>
                         <Heading level={5} className="mb-1">
-                          Facebook
+                          Messenger
                         </Heading>
-                        <Text color="muted">contacto@nucusoft.com</Text>
-                        <Text color="muted">ventas@nucusoft.com</Text>
+                        <Text color="muted">NucúSoft</Text>
                       </div>
                     </div>
                   </Card>
@@ -65,11 +65,11 @@ const Contact: React.FC = () => {
                   <Card>
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-nucusoft-beige to-nucusoft-light-gray rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <FaPhone className="text-nucusoft-black" />
+                        <IoLogoWhatsapp className="text-nucusoft-black" />
                       </div>
                       <div>
                         <Heading level={5} className="mb-1">
-                          Teléfono
+                          Whatsapp
                         </Heading>
                         <Text color="muted">+52 1 961 213 4751</Text>
                       </div>

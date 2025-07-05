@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { FaCalendarAlt, FaComments } from "react-icons/fa"
+import { FaFacebook, FaFacebookMessenger } from "react-icons/fa"
 import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import Button from "../atoms/Button"
@@ -41,23 +41,9 @@ const CallToAction: React.FC = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center max-w-md mx-auto">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-                <Button variant="secondary" size="lg" className="w-full">
-                  <FaCalendarAlt className="mr-2" />
-                  Agendar Consulta
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex-1">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full border-nucusoft-white text-nucusoft-white hover:bg-nucusoft-white hover:text-nucusoft-black bg-transparent"
-                >
-                  <FaComments className="mr-2" />
-                  Contactar Ahora
-                </Button>
-              </motion.div>
+            {/* Botones de contacto temporalmente desactivados */}
+            <div className="hidden">
+              {/* Espacio reservado para futuros botones */}
             </div>
           </AnimatedSection>
 

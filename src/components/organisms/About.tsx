@@ -95,7 +95,7 @@ const About: React.FC = () => {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.8}>
+            {/*<AnimatedSection delay={0.8}>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button variant="primary" size="lg">
@@ -109,7 +109,7 @@ const About: React.FC = () => {
                   </Button>
                 </motion.div>
               </div>
-            </AnimatedSection>
+            </AnimatedSection>*/}
           </div>
         </div>
       </div>

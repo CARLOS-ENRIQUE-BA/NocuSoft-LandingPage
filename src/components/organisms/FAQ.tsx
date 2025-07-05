@@ -1,12 +1,16 @@
 "use client"
 
 import type React from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
 import Heading from "../atoms/Heading"
 import Text from "../atoms/Text"
 import AnimatedSection from "../atoms/AnimatedSection"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const FAQ: React.FC = () => {
+  const [openItem, setOpenItem] = useState<string | undefined>(undefined)
+
   const faqs = [
     {
       question: "¿Cuánto tiempo toma desarrollar una aplicación web?",
@@ -54,18 +58,38 @@ const FAQ: React.FC = () => {
 
         <AnimatedSection delay={0.3}>
           <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="w-full space-y-4">
+            <Accordion type="single" collapsible className="w-full space-y-4" value={openItem} onValueChange={setOpenItem}>
               {faqs.map((faq, index) => (
-                <AccordionItem
+                <motion.div
                   key={index}
-                  value={`item-${index}`}
-                  className="bg-nucusoft-white rounded-lg shadow-sm border-0 px-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
                 >
-                  <AccordionTrigger className="text-left font-semibold text-nucusoft-black hover:text-nucusoft-beige py-6">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 leading-relaxed pb-6">{faq.answer}</AccordionContent>
-                </AccordionItem>
+                  <AccordionItem
+                    value={`item-${index}`}
+                    className="bg-nucusoft-white rounded-lg shadow-sm border-0 px-6"
+                  >
+                    <AccordionTrigger className="text-left font-semibold text-nucusoft-black hover:text-nucusoft-beige py-6">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600 leading-relaxed pb-6 overflow-hidden">
+                      <AnimatePresence>
+                        {openItem === `item-${index}` && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                          >
+                            {faq.answer}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </AccordionContent>
+                  </AccordionItem>
+                </motion.div>
               ))}
             </Accordion>
           </div>

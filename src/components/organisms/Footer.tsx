@@ -8,7 +8,6 @@ import {
   FaTwitter,
   FaLinkedin,
   FaInstagram,
-  FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa"
@@ -74,12 +73,12 @@ const Footer: React.FC = () => {
               </Text>
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-nucusoft-light-gray">
-                  <FaEnvelope className="w-4 h-4" />
-                  <Text variant="small" className="text-nucusoft-light-gray">contacto@nucusoft.com</Text>
+                  <FaFacebook className="w-4 h-4" />
+                  <Text variant="small" className="text-nucusoft-light-gray">NucúSoft</Text>
                 </div>
                 <div className="flex items-center gap-3 text-nucusoft-light-gray">
                   <FaPhone className="w-4 h-4" />
-                  <Text variant="small" className="text-nucusoft-light-gray">+52 (55) 1234-5678</Text>
+                  <Text variant="small" className="text-nucusoft-light-gray">+52 1 961 213 4751</Text>
                 </div>
               </div>
             </div>
